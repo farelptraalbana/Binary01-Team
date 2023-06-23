@@ -64,8 +64,8 @@ if(isset($_POST['submit'])){
       <input type="password" name="password" required placeholder="Masukkan Password Anda">
       <input type="password" name="cpassword" required placeholder="Konfirmasi Password Anda">
       <select name="user_type">
-         <option value="user">Admin</option>
-         <option value="admin">Kurir</option>
+         <option value="admin">Admin</option>
+         <option value="kurir">Kurir</option>
          <option value="" disabled selected hidden>---Anda sebagai apa?---</option>
       </select>
       <input type="submit" name="submit" value="Register" class="form-btn">
