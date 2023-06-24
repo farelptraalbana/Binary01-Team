@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+*{
+  font-family: 'Poppins', sans-serif;
+  margin:0; 
+  padding:0;
+}
+
+.container{
+  min-height: 100vh;
+}
+
+.kotak_header{
+  position: absolute;
+  background: #FFBA08;
+  height: 100px;
+  width: 1365px;
+}
+
+.header img{
+  position: absolute;
+  width: 140px;
+  height: 100px;
+  margin-left: 30px;
+}
+
+.content{
+  width: 1365px;
+  position: absolute;
+  margin-top: 100px;
+}
+
+.imgslide {
+  display: none;
+}
+
+.content img {
+  vertical-align: middle;
+  height: 300px;
+  width: 1365px;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  color: rgba(208, 0, 0, 1);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: rgb(0, 0, 0);
+}
+
+.content .numberslide {
+  color: #ffffff;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
