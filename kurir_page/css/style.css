@@ -193,53 +193,35 @@
   margin-left: 60px;
 }
 
-.kotak2 h3{
-  position: absolute;
+.kotak2 a{
   color: #FFF;
   font-size: 32px;
   font-family: Ubuntu;
+  display: flex;
+  text-align: center;
   width: 199px;
   height: 44px;
   margin-top: 10px;
-  margin-left: 47px;
+  cursor: pointer;
+  text-decoration: none;
 }
-
-.kotak2 h4{
-   position: absolute;
-   color: #FFF;
-   font-size: 32px;
-   font-family: Ubuntu;
-   width: 199px;
-   height: 44px;
-   margin-top: 40px;
-   margin-left: 22px;
- }
 
 .kotak3 img{
   margin-top: 30px;
   margin-left: 60px;
 }
 
-.kotak3 .tulisan h3{
-  position: absolute;
+.kotak3 a{
   color: #FFF;
   font-size: 32px;
   font-family: Ubuntu;
+  display: flex;
+  text-align: center;
   width: 199px;
   height: 44px;
   margin-top: 10px;
-  margin-left: 60px;
-}
-
-.kotak3 .tulisan h4{
-  position: absolute;
-  color: #FFF;
-  font-size: 32px;
-  font-family: Ubuntu;
-  width: 199px;
-  height: 44px;
-  margin-top: 40px;
-  margin-left: 25px;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .kotak_logout{

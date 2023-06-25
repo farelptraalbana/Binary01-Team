@@ -55,15 +55,11 @@ if(!isset($_SESSION['kurir_name'])){
       <div class="welcome">Selamat Datang, Kurir</div>
       <div class="kotak2">
          <img src="../kurir_page/asset/tujuan.png" alt="">
-         <h3>Tujuan</h3>
-         <h4>Pengiriman</h4>
+         <a href="../kurir_page/tujuan.php">Tujuan Pengiriman</a>
       </div>
       <div class="kotak3">
          <img src="../kurir_page/asset/status_perjalanan.png" alt="">
-         <div class="tulisan">
-            <h3>Status</h3>
-            <h4>Perjalanan</h4>
-         </div>
+         <a href="../kurir_page/status_perjalanan.php">Status Perjalanan</a>
       </div>
       <div class="kotak_logout"></div>
       <div class="logout">

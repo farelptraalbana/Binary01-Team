@@ -55,7 +55,11 @@ if(!isset($_SESSION['admin_name'])){
    </div>
 
    <div class="content">
-      
+   <div class="kotak_logout"></div>
+      <div class="logout">
+         <img src="../kurir_page/asset/logout.png" alt="">
+         <a href="../login/logout.php" class="btn">Logout</a>
+      </div>
    </div>
 
 </div>

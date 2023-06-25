@@ -59,18 +59,15 @@ if(!isset($_SESSION['admin_name'])){
       <div class="welcome">Selamat Datang, Administrator</div>
       <div class="kotak2">
          <img src="../admin_page/asset/barang.png" alt="">
-         <h3>Data Barang</h3>
+         <a href="../admin_page/data_barang.php">Data Barang</a>
       </div>
       <div class="kotak3">
          <img src="../admin_page/asset/status_perjalanan.png" alt="">
-         <div class="tulisan">
-            <h3>Status</h3>
-            <h4>Perjalanan</h4>
-         </div>
+         <a href="../admin_page/status_perjalanan.php">Status Perjalanan</a>
       </div>
       <div class="kotak4">
          <img src="../admin_page/asset/kurir.png" alt="">
-         <h3>Data Kurir</h3>
+         <a href="../admin_page/data_kurir.php">Data Kurir</a>
       </div>
       <div class="kotak_logout"></div>
       <div class="logout">
