@@ -68,13 +68,15 @@
   background: #D00000;
 }
 
-.menubar1 h3{
+.menubar1 h3 a{
   color: #FFF;
   font-size: 22px;
   font-family: Ubuntu;
   position: absolute;
   margin-top: 20px;
   margin-left: 65px;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .menubar1 img{
@@ -92,13 +94,15 @@
   background: #F48C06;
 }
 
-.menubar2 h3{
+.menubar2 h3 a{
   color: #FFF;
   font-size: 22px;
   font-family: Ubuntu;
   position: absolute;
   margin-top: 20px;
   margin-left: 65px;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .menubar2 img{
@@ -116,13 +120,15 @@
   background: #F48C06;
 }
 
-.menubar3 h3{
+.menubar3 h3 a{
   color: #FFF;
   font-size: 22px;
   font-family: Ubuntu;
   position: absolute;
   margin-top: 20px;
   margin-left: 65px;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .menubar3 img{
@@ -140,13 +146,15 @@
   background: #F48C06;
 }
 
-.menubar4 h3{
+.menubar4 h3 a{
   color: #FFF;
   font-size: 22px;
   font-family: Ubuntu;
   position: absolute;
   margin-top: 20px;
   margin-left: 65px;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .menubar4 img{
