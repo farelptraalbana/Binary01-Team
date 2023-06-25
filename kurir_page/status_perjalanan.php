@@ -16,10 +16,10 @@ if(!isset($_SESSION['kurir_name'])){
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Halaman Dashboard Kurir</title>
+   <title>Halaman Status Perjalanan Kurir</title>
 
    <!-- custom css file link  -->
-   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/status_perjalanan.css">
 
 </head>
 <body>
@@ -28,6 +28,7 @@ if(!isset($_SESSION['kurir_name'])){
    <div class="kotak">
       <div class="header">
          <img src="../kurir_page/asset/logo.png" alt="logo">
+         <h2>Selamat Datang, Kurir</h2>
       </div>
       <div class="menu_bar">
          <img src="../kurir_page/asset/profile.png" alt="profile">
@@ -35,41 +36,22 @@ if(!isset($_SESSION['kurir_name'])){
          <div class="nama_admin"><?php echo $_SESSION['kurir_name'] ?></div>
          <h2>Menu</h2>
          <div class="menubar1">
-            <h3><a href="../kurir_page/kurir_page.php">Dashboard</a></h3>
+         <h3><a href="../kurir_page/kurir_page.php">Dashboard</a></h3>
             <img src="../kurir_page/asset/dashboard.png" alt="">
          </div>
          <div class="menubar2">
-            <h3><a href="../kurir_page/tujuan.php">Tujuan Pengiriman</a></h3>
+         <h3><a href="../kurir_page/tujuan.php">Tujuan Pengiriman</a></h3>
             <img src="../kurir_page/asset/tujuan.png" alt="">
          </div>
          <div class="menubar3">
-            <h3><a href="../kurir_page/status_perjalanan.php">Status Perjalanan</a></h3>
+         <h3><a href="../kurir_page/status_perjalanan.php">Status Perjalanan</a></h3>
             <img src="../kurir_page/asset/status_perjalanan.png" alt="">
          </div>
       </div>
    </div>
 
    <div class="content">
-      <div class="kotak1"></div>
-      <h3>Hi !</h3>
-      <div class="welcome">Selamat Datang, Kurir</div>
-      <div class="kotak2">
-         <img src="../kurir_page/asset/tujuan.png" alt="">
-         <h3>Tujuan</h3>
-         <h4>Pengiriman</h4>
-      </div>
-      <div class="kotak3">
-         <img src="../kurir_page/asset/status_perjalanan.png" alt="">
-         <div class="tulisan">
-            <h3>Status</h3>
-            <h4>Perjalanan</h4>
-         </div>
-      </div>
-      <div class="kotak_logout"></div>
-      <div class="logout">
-         <img src="../kurir_page/asset/logout.png" alt="">
-         <a href="../login/logout.php" class="btn">Logout</a>
-      </div>
+      
    </div>
 
 </div>

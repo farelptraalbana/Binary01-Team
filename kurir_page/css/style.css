@@ -1,138 +1,271 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
 
 *{
-   font-family: 'Poppins', sans-serif;
-   margin:0; padding:0;
-   box-sizing: border-box;
-   outline: none; border:none;
-   text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  margin:0; 
+  padding:0;
 }
 
 .container{
-   min-height: 100vh;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   padding:20px;
-   padding-bottom: 60px;
+  min-height: 100vh;
 }
 
-.container .content{
-   text-align: center;
+.kotak{
+  position: absolute;
 }
 
-.container .content h3{
-   font-size: 30px;
-   color:#333;
+.header{
+  width: 1365px;
+  height: 90px;
+  background: #E85D04;
 }
 
-.container .content h3 span{
-   background: crimson;
-   color:#fff;
-   border-radius: 5px;
-   padding:0 15px;
+.header img{
+  width: 110px;
+  height: 70px;
+  margin-top: 10px;
 }
 
-.container .content h1{
-   font-size: 50px;
-   color:#333;
+.menu_bar{
+  width: 250px;
+  height: 558px;
+  background: #FFBA08;
 }
 
-.container .content h1 span{
-   color:crimson;
+.menu_bar img{
+  width: 50px;
+  height: 54px;
+  margin-left: 20px;
+  margin-top: 30px;
 }
 
-.container .content p{
-   font-size: 25px;
-   margin-bottom: 20px;
+.menu_bar .nama_admin{
+  color: #F5F5F5;
+  font-size: 20px;
+  font-family: Ubuntu;
+  width: 150px;
+  margin-left: 85px;
 }
 
-.container .content .btn{
-   display: inline-block;
-   padding:10px 30px;
-   font-size: 20px;
-   background: #333;
-   color:#fff;
-   margin:0 5px;
-   text-transform: capitalize;
+.menu_bar h1{
+  font-size: 23px;
+  margin-left: 87px;
+  margin-top: -60px;
+  font-family: Ubuntu;
 }
 
-.container .content .btn:hover{
-   background: crimson;
+.menu_bar h2{
+  font-size: 20px;
+  margin-top: 40px;
+  margin-left: 90px;
+  font-family: Ubuntu;
 }
 
-.form-container{
-   min-height: 100vh;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   padding:20px;
-   padding-bottom: 60px;
-   background: #20202A;
+.menubar1{
+  width: 250px;
+  height: 70px;
+  margin-top: 20px;
+  background: #D00000;
 }
 
-.form-container form{
-   padding:20px;
-   border-radius: 5px;
-   box-shadow: 0 5px 10px rgba(0,0,0,.1);
-   background: #2B2D39;
-   text-align: center;
-   width: 500px;
+.menubar1 h3 a{
+  color: #FFF;
+  font-size: 22px;
+  font-family: Ubuntu;
+  position: absolute;
+  margin-top: 20px;
+  margin-left: 65px;
+  cursor: pointer;
+  text-decoration: none;
 }
 
-.form-container form h3{
-   font-size: 30px;
-   margin-bottom: 10px;
-   color:#FEEAAF;
+.menubar1 img{
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 13px;
 }
 
-.form-container form input{
-   color: #FEEAAF;
+.menubar2{
+  width: 250px;
+  height: 70px;
+  margin-top: 20px;
+  background: #F48C06;
 }
 
-.form-container form input,
-.form-container form select{
-   width: 100%;
-   padding:10px 15px;
-   font-size: 17px;
-   margin:8px 0;
-   background: #20202A;
-   border-radius: 5px;
+.menubar2 h3 a{
+  color: #FFF;
+  font-size: 22px;
+  font-family: Ubuntu;
+  position: absolute;
+  margin-top: 20px;
+  margin-left: 65px;
+  cursor: pointer;
+  text-decoration: none;
 }
 
-.form-container form select{
-   color: #FEEAAF;
+.menubar2 img{
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 13px;
 }
 
-.form-container form .form-btn{
-   background: #fbd0d9;
-   color:crimson;
-   text-transform: capitalize;
-   font-size: 20px;
-   cursor: pointer;
+.menubar3{
+  width: 250px;
+  height: 70px;
+  margin-top: 20px;
+  background: #F48C06;
 }
 
-.form-container form .form-btn:hover{
-   background: crimson;
-   color:#fff;
+.menubar3 h3 a{
+  color: #FFF;
+  font-size: 22px;
+  font-family: Ubuntu;
+  position: absolute;
+  margin-top: 20px;
+  margin-left: 65px;
+  cursor: pointer;
+  text-decoration: none;
 }
 
-.form-container form p{
-   margin-top: 10px;
-   font-size: 20px;
-   color:#FEEAAF;
+.menubar3 img{
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 13px;
 }
 
-.form-container form p a{
-   color:crimson;
+.kotak1{
+  position: absolute;
+  width: 150px;
+  height: 70px;
+  margin-left: 430px;
+  margin-top: 160px;
+  border-radius: 4px;
+  background: #FFF;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  filter: blur(2px);
 }
 
-.form-container form .error-msg{
-   margin:10px 0;
-   display: block;
-   background: crimson;
-   color:#fff;
-   border-radius: 5px;
-   font-size: 20px;
-   padding:10px;
+.content h3{
+  position: absolute;
+  margin-left: 450px;
+  margin-top: 160px;
+  color: #D00000;
+  font-size: 60px;
+  font-family: Ubuntu;
+}
+
+.welcome{
+  position: absolute;
+  width: 300px;
+  margin-left: 600px;
+  margin-top: 155px;
+  color: #FFBA08;
+  font-size: 41px;
+  font-family: Ubuntu;
+}
+
+.kotak2{
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  margin-top: 340px;
+  margin-left: 400px;
+  background: #E85D04;
+}
+
+.kotak3{
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  margin-top: 340px;
+  margin-left: 700px;
+  background: #E85D04;
+}
+
+.kotak2 img{
+  margin-top: 30px;
+  margin-left: 60px;
+}
+
+.kotak2 h3{
+  position: absolute;
+  color: #FFF;
+  font-size: 32px;
+  font-family: Ubuntu;
+  width: 199px;
+  height: 44px;
+  margin-top: 10px;
+  margin-left: 47px;
+}
+
+.kotak2 h4{
+   position: absolute;
+   color: #FFF;
+   font-size: 32px;
+   font-family: Ubuntu;
+   width: 199px;
+   height: 44px;
+   margin-top: 40px;
+   margin-left: 22px;
+ }
+
+.kotak3 img{
+  margin-top: 30px;
+  margin-left: 60px;
+}
+
+.kotak3 .tulisan h3{
+  position: absolute;
+  color: #FFF;
+  font-size: 32px;
+  font-family: Ubuntu;
+  width: 199px;
+  height: 44px;
+  margin-top: 10px;
+  margin-left: 60px;
+}
+
+.kotak3 .tulisan h4{
+  position: absolute;
+  color: #FFF;
+  font-size: 32px;
+  font-family: Ubuntu;
+  width: 199px;
+  height: 44px;
+  margin-top: 40px;
+  margin-left: 25px;
+}
+
+.kotak_logout{
+  position: absolute;
+  width: 170px;
+  height: 40px;
+  margin-left: 1150px;
+  margin-top: 580px;
+  border-radius: 4px;
+  background: #FFF;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  filter: blur(2px);
+}
+
+.logout img{
+  position: absolute;
+  margin-left: 1170px;
+  margin-top: 580px;
+}
+
+.logout a{
+  position: absolute;
+  color: black;
+  text-decoration: none;
+  font-size: 24px;
+  font-family: Ubuntu;
+  margin-left: 1210px;
+  margin-top: 580px;
 }
