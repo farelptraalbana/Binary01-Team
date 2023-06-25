@@ -26,7 +26,7 @@ Binary 01 Express merupakan sebuah platform yang dirancang untuk memudahkan pros
   
 5. Tampilan History Barang (untuk Admin):
    - Admin dapat mencari status perjalanan suatu barang berdasarkan entitas pencarian.
-  - Informasi yang ditampilkan: Status_Perjalanan barang yang dicari
+   - Informasi yang ditampilkan: Status_Perjalanan barang yang dicari
 
 6. Tampilan Data Kurir (untuk Admin):
    - Admin dapat melihat data kurir yang terdaftar dalam sistem.
