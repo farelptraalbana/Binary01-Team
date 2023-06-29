@@ -2,7 +2,7 @@
 
 @include '../login/config.php';
 
-// JIKA TOMBOL SIMPAN
+// JIKA TOMBOL SIMPAN ADMIN
 if(isset($_POST['bsimpan'])){
    $simpan = mysqli_query($conn, "INSERT INTO data_barang (no_resi, nama_pengirim, nama_penerima, asal_kiriman, tujuan_barang, waktu_pengiriman, biaya)
    VALUES('$_POST[tresi]',
@@ -25,7 +25,7 @@ if(isset($_POST['bsimpan'])){
    }
 }
 
-// JIKA TOMBOL UBAH
+// JIKA TOMBOL UBAH Admin
 if(isset($_POST['bubah'])){
 
   //Persiapan Ubah Data
@@ -52,7 +52,7 @@ if(isset($_POST['bubah'])){
   }
 }
 
-// JIKA TOMBOL Hapus
+// JIKA TOMBOL Hapus Admin
 if(isset($_POST['bhapus'])){
 
   //Persiapan Ubah Data
@@ -66,6 +66,66 @@ if(isset($_POST['bhapus'])){
   } else{
      echo"<script>alert('HAPUS DATA GAGAL!');
      document.location='data_barang.php';
+          </script>";
+  }
+}
+
+// JIKA TOMBOL SIMPAN Kurir
+if(isset($_POST['bsimpanKurir'])){
+   $simpanKurir = mysqli_query($conn, "INSERT INTO data_kurir (nama_kurir, no_kurir, plat_nomor)
+   VALUES('$_POST[tkurir]',
+          '$_POST[tnomor]',
+          '$_POST[tplat]')");
+   
+   //jika simpan sukses
+   if($simpanKurir){
+      echo"<script>alert('SIMPAN DATA SUKSES!');
+      document.location='data_kurir.php';
+           </script>";
+   } else{
+      echo"<script>alert('SIMPAN DATA GAGAL!');
+      document.location='data_kurir.php';
+           </script>";
+   }
+}
+
+// JIKA TOMBOL UBAH Kurir
+if(isset($_POST['bubahKurir'])){
+
+  //Persiapan Ubah Data
+  $ubahKurir = mysqli_query($conn, "UPDATE data_kurir SET
+                                                      nama_kurir = '$_POST[tkurir]',
+                                                      no_kurir = '$_POST[tnomor]',
+                                                      plat_nomor = '$_POST[tplat]'
+                                                    WHERE id_kurir = '$_POST[id_kurir]'
+                                                        ");
+  
+  //jika simpan sukses
+  if($ubahKurir){
+     echo"<script>alert('UBAH DATA SUKSES!');
+     document.location='data_kurir.php';
+          </script>";
+  } else{
+     echo"<script>alert('UBAH DATA GAGAL!');
+     document.location='data_kurir.php';
+          </script>";
+  }
+}
+
+// JIKA TOMBOL Hapus
+if(isset($_POST['bhapusKurir'])){
+
+  //Persiapan Ubah Data
+  $hapusKurir = mysqli_query($conn, "DELETE FROM data_kurir WHERE id_kurir = '$_POST[id_kurir]'");
+  
+  //jika simpan sukses
+  if($hapusKurir){
+     echo"<script>alert('HAPUS DATA SUKSES!');
+     document.location='data_kurir.php';
+          </script>";
+  } else{
+     echo"<script>alert('HAPUS DATA GAGAL!');
+     document.location='data_kurir.php';
           </script>";
   }
 }

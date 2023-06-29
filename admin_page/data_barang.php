@@ -307,7 +307,7 @@ if(!isset($_SESSION['admin_name'])){
                   Tambah Data
                </button>
 
-               <!-- Modal -->
+               <!-- Akhir Modal Simpan Data -->
                <div class="modal fade" id="modalTambah" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                   <div class="modal-dialog modal-lg">
                      <div class="modal-content">
@@ -356,6 +356,7 @@ if(!isset($_SESSION['admin_name'])){
                      </div>
                   </div>
                </div>
+               <!-- Akhir Modal Simpan Data -->
 
             </div>
           </div>

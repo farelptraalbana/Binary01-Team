@@ -152,11 +152,11 @@ if(!isset($_SESSION['kurir_name'])){
         </div>
 
         <!-- Main Content -->
-        <div class="p-4" id="main-content">
+        <div class="p-2" id="main-content">
           <button class="btn btn-warning" title="button" id="button-toggle">
             <i class="bi bi-list"></i>
           </button>
-          <div class="card mt-5">
+          <div class="card mt-1 mb-3">
             <div class="card-body">
               <h1>Hai !</h1>
               <h3>Selamat Datang Kurir</h3>
@@ -199,5 +199,6 @@ if(!isset($_SESSION['kurir_name'])){
           });
     
         </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
       </body>
     </html>
