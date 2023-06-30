@@ -175,8 +175,7 @@ if(!isset($_SESSION['kurir_name'])){
             <select class="form-select form-select mb-3" name="no_resi" id="no_resi" aria-label=".form-select example">
               <option value="">No Resi Barang</option>
             </select>
-
-            </div>
+          </div>
           
         </div>
     

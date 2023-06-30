@@ -99,6 +99,11 @@ if(!isset($_SESSION['admin_name'])){
           .card .bi{
             font-size: 44px;
           }  
+          .form-select{
+          display: flex;
+          text-align: center;
+          width: 500px;
+         }
         </style>
       </head>
     
@@ -171,6 +176,12 @@ if(!isset($_SESSION['admin_name'])){
 
           <!-- Content Card -->
           <h3 class="text-center mt-2">Status Perjalanan</h3>
+          <div class="d-flex justify-content-center">
+            <label for="no_resi" class="text-center mt-1 mr-3">Pilih Nomor Resi Barang:</label>
+            <select class="form-select form-select mb-3" name="no_resi" id="no_resi" aria-label=".form-select example">
+              <option value="">No Resi Barang</option>
+            </select>
+          </div>
           
         </div>
     
