@@ -105,6 +105,11 @@ if(!isset($_SESSION['kurir_name'])){
          .col {
             font-size: 1.2rem;
          }
+         .form-select{
+          display: flex;
+          text-align: center;
+          width: 500px;
+         }
         </style>
       </head>
     
@@ -171,38 +176,49 @@ if(!isset($_SESSION['kurir_name'])){
 
           <!-- Content Card -->
           <h3 class="text-center mt-2">Tujuan Pengiriman</h3>
-          <div class="container text-center mt-2">
-            <div class="row mt-2">
-               <div class="col">
-               <i class="bi bi-person-circle"></i>
-                  Penerima
-               </div>
-               <div class="col">
-               <i class="bi bi-person-circle"></i>
-                  Pengirim
-               </div>
-               <div class="col">
-               <i class="bi bi-truck"></i>
-                  Asal Kiriman
-               </div>
+          <form action="" method="GET">
+            <div class="d-flex justify-content-center">
+            <label for="no_resi" class="text-center mt-1 mr-3">Pilih Nomor Resi Barang:</label>
+            <select class="form-select form-select mb-3" name="no_resi" id="no_resi" aria-label=".form-select example">
+              <option value="">No Resi Barang</option>
+            </select>
+
             </div>
-         </div>
-         <div class="container mt-4">
-            <div class="col mt-2">
-               <div class="row">
-               <i class="bi bi-bicycle"></i>
-                  Tujuan Barang
-               </div>
-               <div class="row">
-               <i class="bi bi-calendar-event"></i>
-                  Waktu Pengiriman
-               </div>
-               <div class="row">
-               <i class="bi bi-wallet"></i>
-                  Biaya Pengiriman
-               </div>
+
+            <div class="container text-center mt-2">
+              <div class="row mt-2">
+                <div class="col">
+                  <i class="bi bi-person-circle"></i>
+                    Penerima
+                </div>
+                <div class="col">
+                  <i class="bi bi-person-circle"></i>
+                    Pengirim
+                </div>
+                <div class="col">
+                  <i class="bi bi-truck"></i>
+                    Asal Kiriman
+                </div>
+              </div>
             </div>
-         </div>
+            <div class="container mt-4">
+              <div class="col mt-2">
+                <div class="row">
+                  <i class="bi bi-bicycle"></i>
+                    Tujuan Barang
+                </div>
+                <div class="row">
+                  <i class="bi bi-calendar-event"></i>
+                    Waktu Pengiriman
+                </div>
+                <div class="row">
+                  <i class="bi bi-wallet"></i>
+                    Biaya Pengiriman
+                </div>
+              </div>
+            </div>
+          </form>
+          
           
         </div>
     

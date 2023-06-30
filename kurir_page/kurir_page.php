@@ -37,21 +37,17 @@ if(!isset($_SESSION['kurir_name'])){
             margin: 20px 0 20px 0;
             font-size: 18px;
           }
-
           ul li a{
             margin-left: -10px;
           }
-
           .navbar{
             background-color: #E85D04;
           }
-    
           a {
             text-decoration: none;
             width: 30px;
             height: 30px;
           }
-    
           .sidebar {
             width: 250px;
             height: 100vh;
@@ -59,15 +55,12 @@ if(!isset($_SESSION['kurir_name'])){
             margin-left: -300px;
             transition: 0.4s;
           }
-    
           .active-main-content {
             margin-left: 250px;
           }
-    
           .active-sidebar {
             margin-left: 0;
           }
-    
           #main-content {
             transition: 0.4s;
           }

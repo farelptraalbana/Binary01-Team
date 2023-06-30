@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 29 Jun 2023 pada 16.08
+-- Waktu pembuatan: 30 Jun 2023 pada 09.01
 -- Versi server: 10.4.27-MariaDB
 -- Versi PHP: 8.1.12
 
@@ -35,15 +35,17 @@ CREATE TABLE `data_barang` (
   `asal_kiriman` varchar(255) NOT NULL,
   `tujuan_barang` varchar(255) NOT NULL,
   `waktu_pengiriman` varchar(255) NOT NULL,
-  `biaya` varchar(255) NOT NULL
+  `biaya` varchar(255) NOT NULL,
+  `id_status` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data untuk tabel `data_barang`
 --
 
-INSERT INTO `data_barang` (`id_pelanggan`, `no_resi`, `nama_pengirim`, `nama_penerima`, `asal_kiriman`, `tujuan_barang`, `waktu_pengiriman`, `biaya`) VALUES
-(3, 144, 'Farel Bana', 'Rehan', 'Tanjungpinang Kota', 'Medan', '1 Jam', '30.000');
+INSERT INTO `data_barang` (`id_pelanggan`, `no_resi`, `nama_pengirim`, `nama_penerima`, `asal_kiriman`, `tujuan_barang`, `waktu_pengiriman`, `biaya`, `id_status`) VALUES
+(3, 144, 'Farel Bana', 'Rehan', 'Tanjungpinang Kota', 'Medan', '1 Jam', '30.000', 0),
+(5, 111, 'Farel', 'Rehan', 'Tanjungpinang', 'Batam', '1 Jam', '10.000', 0);
 
 -- --------------------------------------------------------
 
@@ -65,6 +67,25 @@ CREATE TABLE `data_kurir` (
 INSERT INTO `data_kurir` (`id_kurir`, `nama_kurir`, `no_kurir`, `plat_nomor`) VALUES
 (1, 'Amanda', '08114565456', 'BP 4554 WA'),
 (2, 'Ezy', '081234567577', 'BP 1405 CC');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `status_perjalanan`
+--
+
+CREATE TABLE `status_perjalanan` (
+  `id_status` int(255) NOT NULL,
+  `nama_kurir` varchar(255) NOT NULL,
+  `status_perjalanan` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data untuk tabel `status_perjalanan`
+--
+
+INSERT INTO `status_perjalanan` (`id_status`, `nama_kurir`, `status_perjalanan`) VALUES
+(1, 'Farel', 'Barang Diterima Kurir');
 
 -- --------------------------------------------------------
 
@@ -105,13 +126,20 @@ INSERT INTO `user_form` (`id`, `name`, `email`, `password`, `user_type`) VALUES
 -- Indeks untuk tabel `data_barang`
 --
 ALTER TABLE `data_barang`
-  ADD PRIMARY KEY (`id_pelanggan`);
+  ADD PRIMARY KEY (`id_pelanggan`),
+  ADD KEY `id_status` (`id_status`);
 
 --
 -- Indeks untuk tabel `data_kurir`
 --
 ALTER TABLE `data_kurir`
   ADD PRIMARY KEY (`id_kurir`);
+
+--
+-- Indeks untuk tabel `status_perjalanan`
+--
+ALTER TABLE `status_perjalanan`
+  ADD PRIMARY KEY (`id_status`);
 
 --
 -- Indeks untuk tabel `user_form`
@@ -127,13 +155,19 @@ ALTER TABLE `user_form`
 -- AUTO_INCREMENT untuk tabel `data_barang`
 --
 ALTER TABLE `data_barang`
-  MODIFY `id_pelanggan` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_pelanggan` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT untuk tabel `data_kurir`
 --
 ALTER TABLE `data_kurir`
   MODIFY `id_kurir` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT untuk tabel `status_perjalanan`
+--
+ALTER TABLE `status_perjalanan`
+  MODIFY `id_status` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT untuk tabel `user_form`
