@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 30 Jun 2023 pada 09.01
--- Versi server: 10.4.27-MariaDB
--- Versi PHP: 8.1.12
+-- Waktu pembuatan: 01 Jul 2023 pada 06.46
+-- Versi server: 10.4.28-MariaDB
+-- Versi PHP: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -35,17 +35,17 @@ CREATE TABLE `data_barang` (
   `asal_kiriman` varchar(255) NOT NULL,
   `tujuan_barang` varchar(255) NOT NULL,
   `waktu_pengiriman` varchar(255) NOT NULL,
-  `biaya` varchar(255) NOT NULL,
-  `id_status` int(255) NOT NULL
+  `biaya` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data untuk tabel `data_barang`
 --
 
-INSERT INTO `data_barang` (`id_pelanggan`, `no_resi`, `nama_pengirim`, `nama_penerima`, `asal_kiriman`, `tujuan_barang`, `waktu_pengiriman`, `biaya`, `id_status`) VALUES
-(3, 144, 'Farel Bana', 'Rehan', 'Tanjungpinang Kota', 'Medan', '1 Jam', '30.000', 0),
-(5, 111, 'Farel', 'Rehan', 'Tanjungpinang', 'Batam', '1 Jam', '10.000', 0);
+INSERT INTO `data_barang` (`id_pelanggan`, `no_resi`, `nama_pengirim`, `nama_penerima`, `asal_kiriman`, `tujuan_barang`, `waktu_pengiriman`, `biaya`) VALUES
+(7, 144, 'Farel Bana', 'Albana', 'Tanjungpinang', 'Batam', '4 jam', '100.000'),
+(8, 1332343, 'Farel Bana', 'Rehan', 'Tanjungpinang', 'Batam', '1 Jam', '10.000'),
+(9, 133, 'Ezy', 'Farel', 'Tanjungpinang2', 'Daik', '4 jam', '30.000');
 
 -- --------------------------------------------------------
 
@@ -77,15 +77,17 @@ INSERT INTO `data_kurir` (`id_kurir`, `nama_kurir`, `no_kurir`, `plat_nomor`) VA
 CREATE TABLE `status_perjalanan` (
   `id_status` int(255) NOT NULL,
   `nama_kurir` varchar(255) NOT NULL,
-  `status_perjalanan` varchar(255) NOT NULL
+  `status_perjalanan` varchar(255) NOT NULL,
+  `id_pelanggan` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data untuk tabel `status_perjalanan`
 --
 
-INSERT INTO `status_perjalanan` (`id_status`, `nama_kurir`, `status_perjalanan`) VALUES
-(1, 'Farel', 'Barang Diterima Kurir');
+INSERT INTO `status_perjalanan` (`id_status`, `nama_kurir`, `status_perjalanan`, `id_pelanggan`) VALUES
+(6, 'Ezy', 'Barang Diterima Pelanggan', 7),
+(7, 'Farel', 'Barang Masuk Got', 8);
 
 -- --------------------------------------------------------
 
@@ -126,8 +128,7 @@ INSERT INTO `user_form` (`id`, `name`, `email`, `password`, `user_type`) VALUES
 -- Indeks untuk tabel `data_barang`
 --
 ALTER TABLE `data_barang`
-  ADD PRIMARY KEY (`id_pelanggan`),
-  ADD KEY `id_status` (`id_status`);
+  ADD PRIMARY KEY (`id_pelanggan`);
 
 --
 -- Indeks untuk tabel `data_kurir`
@@ -139,7 +140,8 @@ ALTER TABLE `data_kurir`
 -- Indeks untuk tabel `status_perjalanan`
 --
 ALTER TABLE `status_perjalanan`
-  ADD PRIMARY KEY (`id_status`);
+  ADD PRIMARY KEY (`id_status`),
+  ADD KEY `id_pelanggan` (`id_pelanggan`);
 
 --
 -- Indeks untuk tabel `user_form`
@@ -155,7 +157,7 @@ ALTER TABLE `user_form`
 -- AUTO_INCREMENT untuk tabel `data_barang`
 --
 ALTER TABLE `data_barang`
-  MODIFY `id_pelanggan` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_pelanggan` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT untuk tabel `data_kurir`
@@ -167,13 +169,23 @@ ALTER TABLE `data_kurir`
 -- AUTO_INCREMENT untuk tabel `status_perjalanan`
 --
 ALTER TABLE `status_perjalanan`
-  MODIFY `id_status` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_status` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT untuk tabel `user_form`
 --
 ALTER TABLE `user_form`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+
+--
+-- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
+--
+
+--
+-- Ketidakleluasaan untuk tabel `status_perjalanan`
+--
+ALTER TABLE `status_perjalanan`
+  ADD CONSTRAINT `status_perjalanan_ibfk_1` FOREIGN KEY (`id_pelanggan`) REFERENCES `data_barang` (`id_pelanggan`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
