@@ -212,7 +212,7 @@ if (!isset($_SESSION['kurir_name'])) {
           <div class="container text-center mt-2">
             <div class="row mt-2">
               <div class="col">
-                <i class="bi bi-person-circle"></i>
+                <i class="bi bi-send-check-fill"></i>
                 No Resi : <?php echo $row['no_resi'] ?>
               </div>
             </div>
