@@ -130,5 +130,44 @@ if(isset($_POST['bhapusKurir'])){
   }
 }
 
+// JIKA TOMBOL SIMPAN Status
+if(isset($_POST['bstatus'])){
+   $nama_kurir = $_POST['tkurir'];
+   $status_perjalanan = $_POST['tstatus'];
+   $no_resi = $_POST['tresi'];
+
+   // Retrieve id_pelanggan based on no_resi
+   $query_pelanggan = "SELECT id_pelanggan FROM data_barang WHERE no_resi = '$no_resi'";
+   $result_pelanggan = mysqli_query($conn, $query_pelanggan);
+   
+   if($result_pelanggan && mysqli_num_rows($result_pelanggan) > 0) {
+      $row_pelanggan = mysqli_fetch_assoc($result_pelanggan);
+      $id_pelanggan = $row_pelanggan['id_pelanggan'];
+
+      // Insert into status_perjalanan table
+      $query = "INSERT INTO status_perjalanan (nama_kurir, status_perjalanan, id_pelanggan)
+             VALUES ('$nama_kurir', '$status_perjalanan', '$id_pelanggan')";
+
+      $simpan = mysqli_query($conn, $query);
+
+      //jika simpan sukses
+      if($simpan){
+         echo "<script>alert('SIMPAN DATA SUKSES!');
+         document.location='status_perjalanan.php';
+              </script>";
+      } else{
+         echo "<script>alert('SIMPAN DATA GAGAL! Error: ".mysqli_error($conn)."');
+         document.location='status_perjalanan.php';
+              </script>";
+      }
+   } else {
+      echo "<script>alert('No Resi not found!');
+      document.location='status_perjalanan.php';
+           </script>";
+   }
+}
+
+
+
 
 ?>

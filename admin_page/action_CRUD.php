@@ -2,28 +2,33 @@
 
 @include '../login/config.php';
 
-// JIKA TOMBOL SIMPAN ADMIN
+// JIKA TOMBOL SIMPAN DATA BARANG ADMIN
 if(isset($_POST['bsimpan'])){
-   $simpan = mysqli_query($conn, "INSERT INTO data_barang (no_resi, nama_pengirim, nama_penerima, asal_kiriman, tujuan_barang, waktu_pengiriman, biaya)
-   VALUES('$_POST[tresi]',
-          '$_POST[tpengirim]',
-          '$_POST[tpenerima]',
-          '$_POST[tasal]',
-          '$_POST[ttujuan]',
-          '$_POST[twaktu]',
-          '$_POST[tbiaya]')");
-   
+   $no_resi = $_POST['tresi'];
+   $nama_pengirim = $_POST['tpengirim'];
+   $nama_penerima = $_POST['tpenerima'];
+   $asal_kiriman = $_POST['tasal'];
+   $tujuan_barang = $_POST['ttujuan'];
+   $waktu_pengiriman = $_POST['twaktu'];
+   $biaya = $_POST['tbiaya'];
+
+   $query = "INSERT INTO data_barang (no_resi, nama_pengirim, nama_penerima, asal_kiriman, tujuan_barang, waktu_pengiriman, biaya, id_pelanggan)
+             VALUES ('$no_resi', '$nama_pengirim', '$nama_penerima', '$asal_kiriman', '$tujuan_barang', '$waktu_pengiriman', '$biaya', 'id_pelanggan')";
+
+   $simpan = mysqli_query($conn, $query);
+
    //jika simpan sukses
    if($simpan){
-      echo"<script>alert('SIMPAN DATA SUKSES!');
+      echo "<script>alert('SIMPAN DATA SUKSES!');
       document.location='data_barang.php';
            </script>";
    } else{
-      echo"<script>alert('SIMPAN DATA GAGAL!');
+      echo "<script>alert('SIMPAN DATA GAGAL! Error: ".mysqli_error($conn)."');
       document.location='data_barang.php';
            </script>";
    }
 }
+
 
 // JIKA TOMBOL UBAH Admin
 if(isset($_POST['bubah'])){
@@ -129,6 +134,5 @@ if(isset($_POST['bhapusKurir'])){
           </script>";
   }
 }
-
 
 ?>

@@ -183,6 +183,7 @@ if (!isset($_SESSION['kurir_name'])) {
       <div class="d-flex justify-content-center">
         <label for="no_resi" class="text-center mt-1 mr-3">Pilih Nomor Resi Barang:</label>
         <select class="form-select form-select mb-3" name="no_resi" id="no_resi" aria-label=".form-select example">
+        <option value="" selected disabled>-- Pilih No Resi Barang --</option>
           <?php
           $server = "localhost";
           $user = "root";
