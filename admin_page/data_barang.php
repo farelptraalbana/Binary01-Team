@@ -150,7 +150,7 @@ if(!isset($_SESSION['admin_name'])){
               </li>
             </ul>
             <div class="card-body mt-5 text-center">
-              <a href="../login/login_form.php" class="btn btn-light mt-5 text-center">
+              <a href="../login/logout.php" class="btn btn-light mt-5 text-center">
                 <i class="bi bi-power text-danger"></i> Logout
               </a>
             </div>            
