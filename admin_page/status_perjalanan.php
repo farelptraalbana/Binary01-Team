@@ -16,7 +16,7 @@ if (!isset($_SESSION['admin_name'])) {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Status Perjalanan</title>
+  <title>Admin Page || Status Perjalanan</title>
   <!-- bootstrap 5 css -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous" />
   <!-- custom css -->
@@ -161,6 +161,12 @@ if (!isset($_SESSION['admin_name'])) {
           <a class="text-white" href="../admin_page/data_kurir.php">
             <i class="bi bi-person-fill"></i>
             Data Kurir
+          </a>
+        </li>
+        <li>
+          <a class="text-white" href="../admin_page/register_form.php">
+            <i class="bi bi-key"></i>
+            Daftar Akun
           </a>
         </li>
       </ul>

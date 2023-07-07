@@ -7,9 +7,9 @@ session_start();
 if(isset($_POST['submit'])){
 
    $email = mysqli_real_escape_string($conn, $_POST['email']);
-   $pass = md5($_POST['password']);
+   $password = $_POST['password'];
 
-   $select = " SELECT * FROM user_form WHERE email = '$email' && password = '$pass' ";
+   $select = "SELECT * FROM user_form WHERE email = '$email'";
 
    $result = mysqli_query($conn, $select);
 
@@ -17,23 +17,25 @@ if(isset($_POST['submit'])){
 
       $row = mysqli_fetch_array($result);
 
-      if($row['user_type'] == 'admin'){
+      if(password_verify($password, $row['password'])){
 
-         $_SESSION['admin_name'] = $row['name'];
-         header('location:../admin_page/admin_page.php');
-
-      }elseif($row['user_type'] == 'kurir'){
-
-         $_SESSION['kurir_name'] = $row['name'];
-         header('location:../kurir_page/kurir_page.php');
-
-      }
+         if($row['user_type'] == 'admin'){
+            $_SESSION['admin_name'] = $row['name'];
+            header('location:../admin_page/admin_page.php');
+         }elseif($row['user_type'] == 'kurir'){
+            $_SESSION['kurir_name'] = $row['name'];
+            header('location:../kurir_page/kurir_page.php');
+         }
      
+      }else{
+         $error[] = 'Incorrect email or password!';
+      }
+
    }else{
-      $error[] = 'incorrect email or password!';
+      $error[] = 'Incorrect email or password!';
    }
 
-};
+}
 ?>
 
 <!DOCTYPE html>
@@ -58,8 +60,8 @@ if(isset($_POST['submit'])){
       if(isset($error)){
          foreach($error as $error){
             echo '<span class="error-msg">'.$error.'</span>';
-         };
-      };
+         }
+      }
       ?>
       <input type="email" name="email" required placeholder="Masukkan Email Anda">
       <input type="password" name="password" required placeholder="Masukkan Password Anda">

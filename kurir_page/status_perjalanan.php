@@ -16,7 +16,7 @@ if (!isset($_SESSION['kurir_name'])) {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kurir Page</title>
+  <title>Kurir Page || Status Perjalanan</title>
   <!-- bootstrap 5 css -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous" />
   <!-- custom css -->
@@ -235,11 +235,11 @@ if (!isset($_SESSION['kurir_name'])) {
         </div>
         <div class="mb-3">
           <label class="form-label">Nomor Kurir</label>
-          <input type="text" class="form-control" name="tnomor" placeholder="Masukkan Status Perjalanan">
+          <input type="text" class="form-control" name="tnomor" placeholder="Masukkan Nomor Kurir">
         </div>
         <div class="mb-3">
           <label class="form-label">Plat Kendaraan</label>
-          <input type="text" class="form-control" name="tplat" placeholder="Masukkan Status Perjalanan">
+          <input type="text" class="form-control" name="tplat" placeholder="Masukkan Plat Kendaraan">
         </div>
         <div class="mb-3">
           <label class="form-label">Status Perjalanan</label>
