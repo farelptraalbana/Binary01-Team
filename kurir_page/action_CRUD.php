@@ -133,6 +133,8 @@ if(isset($_POST['bhapusKurir'])){
 // JIKA TOMBOL SIMPAN Status
 if(isset($_POST['bstatus'])){
    $nama_kurir = $_POST['tkurir'];
+   $no_kurir = $_POST['tnomor'];
+   $plat_nomor = $_POST['tplat'];
    $status_perjalanan = $_POST['tstatus'];
    $no_resi = $_POST['tresi'];
 
@@ -145,8 +147,8 @@ if(isset($_POST['bstatus'])){
       $id_pelanggan = $row_pelanggan['id_pelanggan'];
 
       // Insert into status_perjalanan table
-      $query = "INSERT INTO status_perjalanan (nama_kurir, status_perjalanan, id_pelanggan)
-             VALUES ('$nama_kurir', '$status_perjalanan', '$id_pelanggan')";
+      $query = "INSERT INTO status_perjalanan (nama_kurir, no_kurir, plat_nomor, status_perjalanan, id_pelanggan)
+             VALUES ('$nama_kurir', '$no_kurir', '$plat_nomor', '$status_perjalanan', '$id_pelanggan')";
 
       $simpan = mysqli_query($conn, $query);
 

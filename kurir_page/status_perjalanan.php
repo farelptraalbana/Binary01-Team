@@ -181,7 +181,7 @@ if (!isset($_SESSION['kurir_name'])) {
           $server = "localhost";
           $user = "root";
           $password = "";
-          $database = "user_db";
+          $database = "pengiriman_db";
           $conn = mysqli_connect($server, $user, $password, $database) or die(mysqli_error($conn));
           $data = mysqli_query($conn, "SELECT * FROM data_barang");
           if ($data) {
@@ -232,6 +232,14 @@ if (!isset($_SESSION['kurir_name'])) {
         <div class="mb-3">
           <label class="form-label">Nama Kurir</label>
           <input type="text" class="form-control" name="tkurir" placeholder="Masukkan Nama Kurir">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Nomor Kurir</label>
+          <input type="text" class="form-control" name="tnomor" placeholder="Masukkan Status Perjalanan">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Plat Kendaraan</label>
+          <input type="text" class="form-control" name="tplat" placeholder="Masukkan Status Perjalanan">
         </div>
         <div class="mb-3">
           <label class="form-label">Status Perjalanan</label>
